@@ -1,5 +1,10 @@
 package main
 
+import (
+	"os"
+)
+
 func main() {
-	// Place your code here.
+	env, _ := ReadDir(os.Args[1])
+	RunCmd(os.Args[2:], env)
 }
